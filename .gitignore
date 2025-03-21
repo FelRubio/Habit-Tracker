@@ -1,62 +1,66 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## User settings
+# Xcode specific
+.DS_Store
 xcuserdata/
+DerivedData/
+*.xcworkspace
+!default.xcworkspace/contents.xcworkspacedata
+*.lock
 
-## Obj-C/Swift specific
-*.hmap
+# Swift Package Manager
+.swiftpm/
+Package.resolved
 
-## App packaging
-*.ipa
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Archives
+*.xcarchive
+
+# Provisioning Profiles
+*.mobileprovision
+*.provisionprofile
+
+# Symbolication
 *.dSYM.zip
-*.dSYM
+*.bcsymbolmap
 
-## Playgrounds
+# Build artifacts
+*.o
+*.a
+*.lo
+*.la
+*.so
+*.dylib
+*.pyc
+*.pyo
+
+# Playgrounds
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# SwiftUI Previews
+*.swiftpm/xcode-version-info
+*.swiftpm/build/
 
-.build/
+# Temporary files
+*.tmp
+*.swp
+*.swx
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# Personal settings
+.idea/
+.vscode/
+*.swcrc
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+# Additional customization
+# *.plist - Ignore if you're generating plist files
