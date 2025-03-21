@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Habit Tracker
+//  HabitTracker
 //
 //  Created by Felipe on 21/03/25.
 //
