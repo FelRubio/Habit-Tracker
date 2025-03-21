@@ -1,23 +1,32 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  desc "Build and run the Debug configuration"
+  lane :build_debug do
+    build_app(
+      scheme: "HabitTracker-Debug",
+      configuration: "Debug",
+      export_method: "development"
+    )
+  end
+
+  desc "Build and run the Development configuration"
+  lane :build_dev do
+    build_app(
+      scheme: "HabitTracker-Development",
+      configuration: "Release-Development",
+      export_method: "development"
+    )
+  end
+
+  desc "Build and deploy the Production configuration to TestFlight"
+  lane :build_prod do
+    build_app(
+      scheme: "HabitTracker-Production",
+      configuration: "Release-Production",
+      export_method: "app-store"
+    )
+    upload_to_testflight
   end
 end
+
